@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC SETTINGS
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Exclusive content, private updates and premium access."
+    >
+
+    <meta
+        name="theme-color"
+        content="#08080b"
+    >
+
+    <title>Vici | Exclusive Access</title>
+
+
+    <!-- =====================================================
+         SOCIAL MEDIA PREVIEW
+    ====================================================== -->
+
+    <meta
+        property="og:title"
+        content="Vici | Exclusive Access"
+    >
+
+    <meta
+        property="og:description"
+        content="Exclusive content, private updates and premium access."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+
+    <!-- =====================================================
+         EVERYTHING BELOW IS CSS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           EASY CUSTOMIZATION
+        ====================================================== */
+
+        :root {
+
+            --background: #08080b;
+
+            --surface: rgba(17, 17, 22, 0.88);
+
+            --surface-hover: rgba(27, 27, 34, 0.95);
+
+            --text-primary: #ffffff;
+
+            --text-secondary: #b1b1bb;
+
+            --text-muted: #696974;
+
+            --accent: #ff3d81;
+
+            --accent-light: #ff709f;
+
+            --accent-glow:
+                rgba(255, 61, 129, 0.28);
+
+            --border:
+                rgba(255, 255, 255, 0.09);
+
+            --max-width: 680px;
+
+            --card-radius: 18px;
+        }
+
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color:
+                var(--text-primary);
+
+            background:
+                var(--background);
+
+            overflow-x: hidden;
+        }
+
+
+        /* =====================================================
+           BACKGROUND IMAGE
+
+           CHANGE ONLY THE URL BELOW.
+
+           Example:
+
+           url("https://i.imgur.com/iLwpVFw.jpeg");
+
+           The image is automatically blurred.
+        ====================================================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: -30px;
+
+            z-index: -3;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(8, 8, 11, 0.54),
+                    rgba(8, 8, 11, 0.86)
+                ),
+
+                url("https://i.imgur.com/iLwpVFw.jpeg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            filter: blur(15px);
+
+            transform: scale(1.08);
+        }
+
+
+        /* =====================================================
+           BACKGROUND OVERLAY
+        ====================================================== */
+
+        body::after {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: -2;
+
+            pointer-events: none;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(255, 61, 129, 0.17),
+                    transparent 40%
+                ),
+
+                rgba(8, 8, 11, 0.22);
+        }
+
+
+        /* =====================================================
+           MAIN CONTAINER
+        ====================================================== */
+
+        .landing-page {
+
+            width: 100%;
+
+            max-width:
+                var(--max-width);
+
+            margin:
+                0 auto;
+
+            padding:
+                28px 18px 55px;
+        }
+
+
+        /* =====================================================
+           HERO SECTION
+        ====================================================== */
+
+        .hero-section {
+
+            padding:
+                28px 10px 28px;
+
+            text-align:
+                center;
+        }
+
+
+        .age-badge {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                6px;
+
+            padding:
+                7px 13px;
+
+            color:
+                #ff9cbc;
+
+            background:
+                rgba(255, 61, 129, 0.12);
+
+            border:
+                1px solid
+                rgba(255, 61, 129, 0.18);
+
+            border-radius:
+                50px;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                1.2px;
+        }
+
+
+        .hero-section h1 {
+
+            margin-top:
+                17px;
+
+            font-size:
+                clamp(36px, 9vw, 54px);
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                -1.5px;
+
+            line-height:
+                0.98;
+
+            text-shadow:
+                0 4px 25px
+                rgba(0, 0, 0, 0.4);
+        }
+
+
+        .hero-description {
+
+            max-width:
+                520px;
+
+            margin:
+                17px auto 0;
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                15px;
+
+            line-height:
+                1.65;
+        }
+
+
+        /* =====================================================
+           PRIMARY CTA
+        ====================================================== */
+
+        .primary-button {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                12px;
+
+            width:
+                100%;
+
+            margin-top:
+                22px;
+
+            padding:
+                17px 20px;
+
+            color:
+                #ffffff;
+
+            text-decoration:
+                none;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    var(--accent),
+                    var(--accent-light)
+                );
+
+            border-radius:
+                14px;
+
+            font-size:
+                16px;
+
+            font-weight:
+                850;
+
+            box-shadow:
+
+                0 12px 35px
+                rgba(255, 61, 129, 0.25);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .primary-button:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+
+                0 16px 42px
+                rgba(255, 61, 129, 0.35);
+        }
+
+
+        .primary-button:active {
+
+            transform:
+                scale(0.98);
+        }
+
+
+        .privacy-note {
+
+            margin-top:
+                11px;
+
+            color:
+                var(--text-muted);
+
+            font-size:
+                11px;
+        }
+
+
+        /* =====================================================
+           SECTION HEADING
+        ====================================================== */
+
+        .content-section {
+
+            margin-top:
+                15px;
+        }
+
+
+        .section-heading {
+
+            margin-bottom:
+                13px;
+        }
+
+
+        .section-heading span {
+
+            color:
+                var(--accent);
+
+            font-size:
+                10px;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                1.7px;
+        }
+
+
+        .section-heading h2 {
+
+            margin-top:
+                4px;
+
+            font-size:
+                23px;
+
+            letter-spacing:
+                -0.4px;
+        }
+
+
+        /* =====================================================
+           CONTENT CARDS
+        ====================================================== */
+
+        .content-card {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                14px;
+
+            width:
+                100%;
+
+            margin-bottom:
+                10px;
+
+            padding:
+                16px;
+
+            color:
+                #ffffff;
+
+            text-decoration:
+                none;
+
+            background:
+                var(--surface);
+
+            backdrop-filter:
+                blur(14px);
+
+            -webkit-backdrop-filter:
+                blur(14px);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                var(--card-radius);
+
+            box-shadow:
+                0 8px 30px
+                rgba(0, 0, 0, 0.15);
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        .content-card:hover {
+
+            background:
+                var(--surface-hover);
+
+            border-color:
+                rgba(255, 61, 129, 0.35);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .content-icon {
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            width:
+                46px;
+
+            height:
+                46px;
+
+            flex-shrink:
+                0;
+
+            background:
+                rgba(255, 61, 129, 0.11);
+
+            border:
+                1px solid
+                rgba(255, 61, 129, 0.12);
+
+            border-radius:
+                13px;
+
+            font-size:
+                20px;
+        }
+
+
+        .content-info {
+
+            flex:
+                1;
+        }
+
+
+        .content-info h3 {
+
+            margin-bottom:
+                4px;
+
+            font-size:
+                15px;
+
+            font-weight:
+                800;
+        }
+
+
+        .content-info p {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                12px;
+
+            line-height:
+                1.45;
+        }
+
+
+        .card-arrow {
+
+            color:
+                #85858f;
+
+            font-size:
+                19px;
+
+            transition:
+                transform 0.2s ease,
+                color 0.2s ease;
+        }
+
+
+        .content-card:hover .card-arrow {
+
+            transform:
+                translateX(3px);
+
+            color:
+                var(--accent-light);
+        }
+
+
+        /* =====================================================
+           BENEFITS
+        ====================================================== */
+
+        .benefits-section {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                8px;
+
+            margin-top:
+                23px;
+        }
+
+
+        .benefit {
+
+            padding:
+                14px 5px;
+
+            text-align:
+                center;
+
+            background:
+                rgba(255, 255, 255, 0.035);
+
+            backdrop-filter:
+                blur(10px);
+
+            -webkit-backdrop-filter:
+                blur(10px);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.05);
+
+            border-radius:
+                12px;
+        }
+
+
+        .benefit strong {
+
+            display:
+                block;
+
+            font-size:
+                17px;
+        }
+
+
+        .benefit span {
+
+            display:
+                block;
+
+            margin-top:
+                4px;
+
+            color:
+                var(--text-muted);
+
+            font-size:
+                10px;
+        }
+
+
+        /* =====================================================
+           FINAL CTA
+        ====================================================== */
+
+        .final-cta {
+
+            margin-top:
+                30px;
+
+            padding:
+                26px 18px;
+
+            text-align:
+                center;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(255, 61, 129, 0.12),
+                    rgba(255, 255, 255, 0.025)
+                );
+
+            backdrop-filter:
+                blur(14px);
+
+            -webkit-backdrop-filter:
+                blur(14px);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                var(--card-radius);
+        }
+
+
+        .final-cta h2 {
+
+            font-size:
+                21px;
+        }
+
+
+        .final-cta p {
+
+            margin-top:
+                9px;
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                13px;
+
+            line-height:
+                1.5;
+        }
+
+
+        /* =====================================================
+           FLOATING NOTIFICATION
+        ====================================================== */
+
+        .floating-notification {
+
+            position:
+                fixed;
+
+            left:
+                18px;
+
+            bottom:
+                18px;
+
+            z-index:
+                50;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            max-width:
+                290px;
+
+            padding:
+                11px 14px;
+
+            color:
+                #ffffff;
+
+            background:
+                rgba(17, 17, 22, 0.95);
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.1);
+
+            border-radius:
+                13px;
+
+            box-shadow:
+                0 10px 35px
+                rgba(0, 0, 0, 0.4);
+
+            font-size:
+                11px;
+
+            opacity:
+                0;
+
+            transform:
+                translateY(20px);
+
+            pointer-events:
+                none;
+
+            transition:
+                opacity 0.35s ease,
+                transform 0.35s ease;
+        }
+
+
+        .floating-notification.show {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        .notification-icon {
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            width:
+                31px;
+
+            height:
+                31px;
+
+            flex-shrink:
+                0;
+
+            background:
+                rgba(255, 61, 129, 0.13);
+
+            border:
+                1px solid
+                rgba(255, 61, 129, 0.15);
+
+            border-radius:
+                9px;
+
+            font-size:
+                14px;
+        }
+
+
+        .notification-text {
+
+            min-width:
+                0;
+        }
+
+
+        .notification-text strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                2px;
+
+            font-size:
+                11px;
+        }
+
+
+        .notification-text span {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                10px;
+
+            line-height:
+                1.35;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .site-footer {
+
+            margin-top:
+                32px;
+
+            text-align:
+                center;
+
+            color:
+                var(--text-muted);
+
+            font-size:
+                10px;
+
+            line-height:
+                1.7;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            .landing-page {
+
+                padding:
+                    18px 14px 45px;
+            }
+
+
+            .hero-section {
+
+                padding:
+                    20px 8px 25px;
+            }
+
+
+            .content-card {
+
+                padding:
+                    14px;
+            }
+
+
+            .floating-notification {
+
+                left:
+                    12px;
+
+                right:
+                    12px;
+
+                bottom:
+                    12px;
+
+                max-width:
+                    none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MAIN PAGE
+    ====================================================== -->
+
+    <main class="landing-page">
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero-section">
+
+            <span class="age-badge">
+                🔞 18+ ONLY
+            </span>
+
+
+            <h1>
+                Hot Content
+            </h1>
+
+
+            <p class="hero-description">
+
+                Welcome to my exclusive space.
+                Discover private updates, premium content
+                and everything available through my Telegram.
+
+            </p>
+
+
+            <!-- MAIN CTA -->
+
+            <a
+                href="https://t.me/Ivankahvip"
+                class="primary-button telegram-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span>
+                    Menu
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+
+            <p class="privacy-note">
+
+                🔒 Private · Exclusive · 18+
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTENT MENU
+        ================================================== -->
+
+        <section class="content-section">
+
+
+            <div class="section-heading">
+
+                <span>
+                    EXPLORE OUR MENU
+                </span>
+
+                <h2>
+                    What's Inside
+                </h2>
+
+            </div>
+
+
+            <!-- =============================================
+                 ITEM 01
+            ============================================== -->
+
+            <a
+                href="https://t.me/Ivankahvip"
+                class="content-card telegram-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <div class="content-icon">
+                    ✨
+                </div>
+
+                <div class="content-info">
+
+                    <h3>
+                        Exclusive Content
+                    </h3>
+
+                    <p>
+                        Access content available exclusively
+                        through my private Telegram.
+                    </p>
+
+                </div>
+
+                <span class="card-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <!-- =============================================
+                 ITEM 02
+            ============================================== -->
+
+            <a
+                href="https://t.me/Ivankahvip"
+                class="content-card telegram-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <div class="content-icon">
+                    🔥
+                </div>
+
+                <div class="content-info">
+
+                    <h3>
+                        Cp Collection
+                    </h3>
+
+                    <p>
+                        Click to buy the best cp folders.
+                    </p>
+
+                </div>
+
+                <span class="card-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <!-- =============================================
+                 ITEM 03
+            ============================================== -->
+
+            <a
+                href="https://t.me/Ivankahvip"
+                class="content-card telegram-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <div class="content-icon">
+                    💎
+                </div>
+
+                <div class="content-info">
+
+                    <h3>
+                        Vip Group
+                    </h3>
+
+                    <p>
+                        Cp Vip Group,Teen Vip Group available.
+                    </p>
+
+                </div>
+
+                <span class="card-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <!-- =============================================
+                 ITEM 04
+            ============================================== -->
+
+            <a
+                href="https://t.me/Ivankahvipr"
+                class="content-card telegram-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <div class="content-icon">
+                    🎁
+                </div>
+
+                <div class="content-info">
+
+                    <h3>
+                        Promo 5 folders for 100
+                    </h3>
+
+                    <p>
+                        Check current offers, bundles and
+                        limited-time opportunities.
+                    </p>
+
+                </div>
+
+                <span class="card-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <!-- =============================================
+                 ITEM 05
+            ============================================== -->
+
+            <a
+                href="https://t.me/Ivankahvip"
+                class="content-card telegram-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <div class="content-icon">
+                    💬
+                </div>
+
+                <div class="content-info">
+
+                    <h3>
+                        Teen Collection
+                    </h3>
+
+                    <p>
+                        Get the best teen offers.
+                    </p>
+
+                </div>
+
+                <span class="card-arrow">
+                    →
+                </span>
+
+            </a>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BENEFITS
+        ================================================== -->
+
+        <section class="benefits-section">
+
+
+            <div class="benefit">
+
+                <strong>
+                    18+
+                </strong>
+
+                <span>
+                    Adults Only
+                </span>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <strong>
+                    🔒
+                </strong>
+
+                <span>
+                    Private Chat
+                </span>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <strong>
+                    ⚡
+                </strong>
+
+                <span>
+                    Direct Answer and Fast.
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="final-cta">
+
+            <h2>
+                Ready to see what's inside?
+            </h2>
+
+
+            <p>
+                Click to ask full menu.
+            </p>
+
+
+            <a
+                href="https://t.me/Ivankahvip"
+                class="primary-button telegram-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                Menu →
+
+            </a>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="site-footer">
+
+            <p>
+                © 2026 Vici. All rights reserved.
+            </p>
+
+            <p>
+                This website is intended for adults aged
+                18 and over.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FLOATING NOTIFICATION
+    ====================================================== -->
+
+    <div
+        class="floating-notification"
+        id="floatingNotification"
+    >
+
+        <div class="notification-icon">
+            ✨
+        </div>
+
+
+        <div class="notification-text">
+
+            <strong>
+                Exclusive Content
+            </strong>
+
+            <span>
+                New content is available.
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* =================================================
+           TELEGRAM CONFIGURATION
+           
+           Your Telegram username is already configured.
+        ================================================== */
+
+        const TELEGRAM_USERNAME =
+            "Ivankahvip";
+
+
+        /* =================================================
+           AUTOMATIC TELEGRAM LINKS
+           
+           This makes every Telegram button use the same
+           username automatically.
+        ================================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const telegramLinks =
+                    document.querySelectorAll(
+                        ".telegram-link"
+                    );
+
+
+                telegramLinks.forEach(
+                    function (link) {
+
+                        link.href =
+                            "https://t.me/" +
+                            TELEGRAM_USERNAME;
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =================================================
+           NOTIFICATION LIST
+           
+           =================================================
+           
+           THIS IS THE MAIN AREA YOU WILL EDIT.
+           
+           Add, remove or change notifications here.
+           
+           They will automatically appear one after
+           another every 30 seconds.
+           
+           Example:
+           
+           {
+               icon: "🎁",
+               title: "Special Offers",
+               message: "Special offers are now available."
+           }
+           
+        ================================================== */
+
+        const notificationMessages = [
+
+
+            /* =============================================
+               NOTIFICATION 01
+            ============================================== */
+
+            {
+                icon: "🎁",
+
+                title:
+                    "Promo 5 folders for 100",
+
+                message:
+                    "5 folders for 100 is now available."
+            },
+
+
+            /* =============================================
+               NOTIFICATION 02
+            ============================================== */
+
+            {
+                icon: "💎",
+
+                title:
+                    "Vip Group",
+
+                message:
+                    "Vip Group is now available."
+            },
+
+
+            /* =============================================
+               NOTIFICATION 03
+            ============================================== */
+
+            {
+                icon: "✨",
+
+                title:
+                    "Exclusive Content",
+
+                message:
+                    "New exclusive content is available."
+            },
+
+
+            /* =============================================
+               NOTIFICATION 04
+            ============================================== */
+
+            {
+                icon: "🔥",
+
+                title:
+                    "Cp Collection",
+
+                message:
+                    "Cp Collection is now available."
+            },
+
+
+            /* =============================================
+               NOTIFICATION 05
+            ============================================== */
+
+            {
+                icon: "💬",
+
+                title:
+                    "Teen Collection",
+
+                message:
+                    "Teen Collection was clicked."
+            }
+
+        ];
+
+
+        /* =================================================
+           NOTIFICATION ELEMENTS
+        ================================================== */
+
+        const notification =
+            document.getElementById(
+                "floatingNotification"
+            );
+
+
+        const notificationIcon =
+            notification.querySelector(
+                ".notification-icon"
+            );
+
+
+        const notificationTitle =
+            notification.querySelector(
+                ".notification-text strong"
+            );
+
+
+        const notificationMessage =
+            notification.querySelector(
+                ".notification-text span"
+            );
+
+
+        /* =================================================
+           NOTIFICATION STATE
+        ================================================== */
+
+        let currentNotification = 0;
+
+
+        /* =================================================
+           SHOW NOTIFICATION
+        ================================================== */
+
+        function showNotification() {
+
+
+            /*
+                Get the current notification.
+            */
+
+            const item =
+                notificationMessages[
+                    currentNotification
+                ];
+
+
+            /*
+                Update icon.
+            */
+
+            notificationIcon.textContent =
+                item.icon;
+
+
+            /*
+                Update title.
+            */
+
+            notificationTitle.textContent =
+                item.title;
+
+
+            /*
+                Update message.
+            */
+
+            notificationMessage.textContent =
+                item.message;
+
+
+            /*
+                Display notification.
+            */
+
+            notification.classList.add(
+                "show"
+            );
+
+
+            /*
+                Hide after 5 seconds.
+            */
+
+            setTimeout(
+                function () {
+
+                    notification.classList.remove(
+                        "show"
+                    );
+
+                },
+                5000
+            );
+
+
+            /*
+                Move to next item.
+            */
+
+            currentNotification++;
+
+
+            /*
+                Start again after the last item.
+            */
+
+            if (
+                currentNotification >=
+                notificationMessages.length
+            ) {
+
+                currentNotification = 0;
+
+            }
+
+        }
+
+
+        /* =================================================
+           FIRST NOTIFICATION
+           
+           Appears 3 seconds after the visitor arrives.
+        ================================================== */
+
+        setTimeout(
+            showNotification,
+            3000
+        );
+
+
+        /* =================================================
+           REPEAT EVERY 30 SECONDS
+        ================================================== */
+
+        setInterval(
+            showNotification,
+            30000
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
